@@ -42,11 +42,15 @@ app.get('/', function(req, res) {
  app.get("/work", function(req,res){
      res.render("list",{listTitle:"Work list",newListItems:workItems});
  })
+
+
 //  app.post("/work",function(req,res){
 //      let item=req.body.newItems;
 //      workItems.push(item);
 //      res.redirect("/work");
 //  });
-
+app.get("/about",function(req,res){
+res.render("about");
+});
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
